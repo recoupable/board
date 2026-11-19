@@ -1,0 +1,18 @@
+:root { --bg: #fff; --ink: #152e37; --muted: #5b6b72; --line: #e3e8ea; --accent: #007ebd; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0e1a1f; --ink: #e6eef1; --muted: #93a4ab; --line: #24343a; --accent: #4fb3e6; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+main { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+nav { border-right: 1px solid var(--line); padding: 16px; }
+nav h1 { font-size: 16px; margin: 0 0 12px; }
+nav h1 a { color: var(--ink); }
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav a[aria-current] { font-weight: 600; }
+section { padding: 16px; max-width: 760px; }
+article { border-bottom: 1px solid var(--line); padding: 12px 0; }
+article.reply { margin-left: 24px; }
+header { display: flex; gap: 8px; align-items: baseline; }
+time { color: var(--muted); font-size: 12px; }
+article p { margin: 4px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 640px) { main { grid-template-columns: 1fr; } nav { border-right: 0; border-bottom: 1px solid var(--line); } }
